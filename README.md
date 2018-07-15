@@ -16,7 +16,7 @@ json-server --watch db.json
 python -m pytest -v
 
 ## Result:
-'''
+```python
 ============================= test session starts =============================
 platform win32 -- Python 3.6.4, pytest-3.6.3, py-1.5.4, pluggy-0.6.0 -- C:\Users\droma\PycharmProjects\API_test\venv\Scripts\python.exe
 cachedir: .pytest_cache
@@ -38,4 +38,4 @@ tavern_example/test_posts.tavern.yaml::Delete post PASSED                [100%]
 
 ========================= 11 passed in 13.44 seconds ==========================
 
-'''
+```
