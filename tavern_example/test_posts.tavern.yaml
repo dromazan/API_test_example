@@ -1,0 +1,94 @@
+---
+test_name: GET first post
+
+stages:
+  - name: GET first post
+    request:
+      url: http://localhost:3000/posts/1
+      method: GET
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200
+      body:
+        id: 1
+        title: json-server
+        author: typicode
+
+---
+
+test_name: POST new post
+
+stages:
+  - name: POST new post
+    request:
+      url: http://localhost:3000/posts/
+      method: POST
+      json:
+        id: 2
+        title: second post
+        author: me
+      headers:
+        content-type: application/json
+    response:
+      status_code: 201
+      body:
+        id: 2
+        title: second post
+        author: me
+
+---
+
+test_name: Update existing post with PUT
+
+stages:
+  - name: Update just created post
+    request:
+      url: http://localhost:3000/posts/2
+      method: PUT
+      json:
+        id: 2
+        title: updated text
+        author: me and me again
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200
+      body:
+        id: 2
+        title: updated text
+        author: me and me again
+
+---
+
+test_name: Update existing post with PATCH
+
+stages:
+  - name: Update just created post
+    request:
+      url: http://localhost:3000/posts/2
+      method: PATCH
+      json:
+        author: not me
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200
+      body:
+        id: 2
+        title: updated text
+        author: not me
+
+---
+
+test_name: Delete post
+
+stages:
+  - name: Delete just created post
+    request:
+      url: http://localhost:3000/posts/2
+      method: DELETE
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200

@@ -1,0 +1,13 @@
+[
+  "pytest_example/test_basics.py::test_connection",
+  "pytest_example/test_posts.py::test_posts_POST",
+  "pytest_example/test_posts.py::test_posts_PUT",
+  "pytest_example/test_posts.py::test_posts_GET",
+  "pytest_example/test_posts.py::test_posts_DELETE",
+  "tavern_example/test_basics.tavern.yaml::Make sure server api is running",
+  "tavern_example/test_posts.tavern.yaml::GET first post",
+  "tavern_example/test_posts.tavern.yaml::POST new post",
+  "tavern_example/test_posts.tavern.yaml::Update existing post with PUT",
+  "tavern_example/test_posts.tavern.yaml::Update existing post with PATCH",
+  "tavern_example/test_posts.tavern.yaml::Delete post"
+]

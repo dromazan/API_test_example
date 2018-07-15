@@ -1,0 +1,11 @@
+test_name: Make sure server api is running
+
+stages:
+  - name: make sure server api is running
+    request:
+      url: http://localhost:3000/
+      method: GET
+      headers:
+        content-type: application/json
+    response:
+      status_code: 200

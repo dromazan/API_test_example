@@ -1,0 +1,7 @@
+[
+  "test_basics.tavern.yaml::Make sure server api is running",
+  "test_posts.tavern.yaml::GET first post",
+  "test_posts.tavern.yaml::POST new post",
+  "test_posts.tavern.yaml::Update existing post with PUT",
+  "test_posts.tavern.yaml::Update existing post with PATCH"
+]
