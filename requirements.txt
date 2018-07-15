@@ -2,3 +2,4 @@ pytest = 3.6.3
 coloredlogs = 10.0
 jsondatabase = 0.1.7
 tavern[pytest]
+Flata = 5.0.0
