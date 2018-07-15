@@ -1,21 +1,21 @@
 # API_test_example
 
-##Install JSON Server:
+## Install JSON Server:
 
 npm install -g json-server
 
-##Start JSON Server:
+## Start JSON Server:
 
 json-server --watch db.json
 
 
-###https://github.com/typicode/json-server
+### https://github.com/typicode/json-server
 
-##Run tests:
+## Run tests:
 
 python -m pytest -v
 
-##Result:
+## Result:
 '''
 ============================= test session starts =============================
 platform win32 -- Python 3.6.4, pytest-3.6.3, py-1.5.4, pluggy-0.6.0 -- C:\Users\droma\PycharmProjects\API_test\venv\Scripts\python.exe
