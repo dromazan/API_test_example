@@ -1,9 +1,8 @@
 import json
-import os
+from db.db_config import db_path
 
-
-db_path = os.path.abspath('C:\\Users\\dromaz\\PycharmProjects\\API_test_example\\db\\db.json')
-
+# db_path = os.path.abspath('C:\\Users\\dromaz\\PycharmProjects\\API_test_example\\db\\db.json')
+# db_path = os.path.dirname(sys.modules['__main__'].__file__) + 'db\\db.json'
 
 def connect_db():
     with open(db_path, "r") as read_file:
