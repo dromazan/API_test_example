@@ -1,1 +1,3 @@
-[]
+[
+  "test_posts.py::test_posts_POST"
+]

@@ -1,9 +1,22 @@
-from flata import Flata, where
-from flata.storages import JSONStorage
-from pytest_example.Resources.resources import db_path
-from jsondb.db import Database
+import json
+import os
+
+
+db_path = os.path.abspath('C:\\Users\\dromaz\\PycharmProjects\\API_test_example\\db\\db.json')
 
 
 def connect_db():
-    db = Flata(db_path, storage=JSONStorage)
-    return db
+    with open(db_path, "r") as read_file:
+        data = json.load(read_file)
+    return data
+
+
+def find_post(db, dict):
+    return dict in db.get('posts')
+
+
+def find_post_by_id(db, id):
+    for i in db.get('posts'):
+        if i.get('id') == id:
+            return i
+    return ValueError

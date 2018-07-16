@@ -1,5 +1,9 @@
 # API_test_example
 
+## Download and install nodejs
+
+https://nodejs.org/en/download/
+
 ## Install JSON Server:
 
 npm install -g json-server
