@@ -34,10 +34,10 @@ def test_posts_PUT():
     # check if response status is 200
     assert response.status_code == 200, 'response code is not 200'
     # check if modified record matches with request data
-    assert new_post == dictfilt(response.json(), new_post.keys()), 'data in request doesn\'t match with response'
+    assert new_post == dictfilt(response.json(), new_post.keys()), 'data in request doesn\'t match with the response'
     time.sleep(1)  # required for data to be added to DB
     # check if data is added to DB and matches with request
-    assert find_post_by_id(connect_db(), '2') == response.json(), 'data in DB doesn\'t match with requested data'
+    assert find_post_by_id(connect_db(), '2') == response.json(), 'data in DB doesn\'t match with the response'
 
 
 def test_posts_GET():
@@ -48,7 +48,7 @@ def test_posts_GET():
     assert response.status_code == 200, 'response code is not 200'
     time.sleep(1)  # required for data to be added to DB
     # check if data is received from the DB and matches with response
-    assert find_post_by_id(connect_db(), '2') == response.json(), 'data in DB doesn\'t match with requested data'
+    assert find_post_by_id(connect_db(), '2') == response.json(), 'data in DB doesn\'t match with the response'
 
 
 def test_posts_DELETE():
@@ -61,4 +61,4 @@ def test_posts_DELETE():
     time.sleep(1)
     # required for data to be added to DB
     # check if data is deleted from the DB
-    assert find_post_by_id(connect_db(), '2') == ValueError, 'data in DB doesn\'t match with requested data'
+    assert find_post_by_id(connect_db(), '2') == ValueError, 'data is not deleted from the DB'
