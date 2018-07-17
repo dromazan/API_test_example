@@ -1,6 +1,4 @@
 
-
-
 def get_next_post_id():
     pass
 
